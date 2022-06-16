@@ -1,0 +1,134 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/scripts/convui%20uss.uss?fileID=7433441132597879392&amp;guid=52c75200dfa5df342832cb1c2c972f50&amp;type=3#convui uss" />
+    <ui:VisualElement name="maincont" style="width: 100%; height: 100%; align-items: flex-end; justify-content: center; flex-direction: column-reverse;">
+        <ui:VisualElement name="Ui-cont" style="background-color: rgb(205, 205, 205); width: 1980px; height: 2004px; border-bottom-left-radius: 45px; border-top-right-radius: 45px; border-bottom-right-radius: 45px; align-items: center; justify-content: flex-start; border-top-left-radius: 45px; position: relative; right: 100px;">
+            <ui:VisualElement name="cont-top" style="position: absolute; background-color: rgb(56, 56, 56); width: 100%; top: 0; height: 10%; border-top-left-radius: 45px; border-top-right-radius: 45px;">
+                <ui:Label text="3D Transformation Calculator" display-tooltip-when-elided="true" name="Title" style="font-size: 120px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="VE-inner" style="width: 1980px; height: 2004px; border-bottom-left-radius: 45px; border-top-right-radius: 45px; border-bottom-right-radius: 45px; align-items: center; justify-content: center; border-top-left-radius: 45px; flex-direction: column;">
+                <ui:VisualElement name="section-a" style="width: 80%; position: absolute; top: 13%; height: 12%; background-color: rgb(174, 174, 174); border-top-left-radius: 30px; border-top-right-radius: 30px; align-items: center; justify-content: flex-start; flex-direction: row; flex-wrap: nowrap;">
+                    <ui:VisualElement name="section-a-line" style="position: absolute; top: 95%; width: 95%; height: 4%; background-color: rgb(160, 160, 160); left: 2.5%;" />
+                    <ui:VisualElement name="H-line" style="position: absolute; width: 1%; height: 80%; background-color: rgb(155, 155, 155); left: 1220px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slots" style="width: 95%; position: absolute; top: 25%; height: 14%; background-color: rgb(174, 174, 174); border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px;">
+                    <ui:ScrollView name="sec_a2-scroll" mode="Horizontal" show-horizontal-scroller="true" horizontal-scroller-visibility="AlwaysVisible" vertical-scroller-visibility="Hidden" touch-scroll-type="Unrestricted" style="width: 100%; height: 100%; flex-direction: column;">
+                        <ui:VisualElement name="scrollcont" style="width: 100%; height: 93%; align-items: center; flex-direction: row;">
+                            <ui:Label text="T=  {1}" display-tooltip-when-elided="true" name="T-Label" style="font-size: 90px; margin-left: 30px; position: relative; color: rgb(0, 0, 0);" />
+                            <ui:VisualElement name="Drop-cont" class="seca_2-VE-conts slot" style="background-color: rgba(101, 103, 103, 0.86); position: relative; left: 35px;" />
+                            <ui:Label text="." display-tooltip-when-elided="true" name="dotIcon" style="left: 27px; font-size: 132px; color: rgb(113, 113, 113); top: -40px; visibility: visible; display: flex;" />
+                            <ui:VisualElement name="Drop-cont" class="seca_2-VE-conts slot" style="background-color: rgba(101, 103, 103, 0.86); margin-left: 20px;" />
+                            <ui:Label text="." display-tooltip-when-elided="true" name="dotIcon" style="font-size: 132px; color: rgb(113, 113, 113); top: -40px; margin-left: -8px; visibility: visible; display: flex;" />
+                            <ui:VisualElement name="Drop-cont" class="seca_2-VE-conts slot" style="background-color: rgba(101, 103, 103, 0.86);" />
+                            <ui:Label text="." display-tooltip-when-elided="true" name="dotIcon" style="left: -5px; font-size: 132px; color: rgb(113, 113, 113); top: -40px; visibility: visible; display: flex;" />
+                            <ui:VisualElement name="Drop-cont" class="seca_2-VE-conts slot" style="background-color: rgba(101, 103, 103, 0.86);" />
+                            <ui:Label text="." display-tooltip-when-elided="true" name="dotIcon" style="left: -5px; font-size: 132px; color: rgb(113, 113, 113); top: -40px; visibility: visible; display: flex;" />
+                            <ui:VisualElement name="Drop-cont" class="seca_2-VE-conts slot" style="background-color: rgba(101, 103, 103, 0.86);" />
+                            <ui:Label text="." display-tooltip-when-elided="true" name="dotIcon" style="left: -5px; font-size: 132px; color: rgb(113, 113, 113); top: -40px; visibility: visible; display: flex;" />
+                            <ui:VisualElement name="Drop-cont" class="seca_2-VE-conts slot" style="background-color: rgba(101, 103, 103, 0.86);" />
+                            <ui:Label text="." display-tooltip-when-elided="true" name="dotIcon" style="left: -5px; font-size: 132px; color: rgb(113, 113, 113); top: -40px; visibility: visible; display: flex;" />
+                            <ui:VisualElement name="Drop-cont" class="seca_2-VE-conts slot" style="background-color: rgba(101, 103, 103, 0.86);" />
+                        </ui:VisualElement>
+                    </ui:ScrollView>
+                    <ui:VisualElement name="Sec-a-Rx" focusable="false" class="seca-VE-conts" style="left: 180px; position: absolute;">
+                        <ui:Label text="&lt;size=75&gt;R&lt;/size&gt;&lt;color=red&gt;x&lt;/color&gt;" display-tooltip-when-elided="true" name="Seca-Rx-label" enable-rich-text="true" class="sec-a-text" />
+                        <ui:Button text="+" display-tooltip-when-elided="true" name="Rx-add-btn" focusable="false" class="utility-btn-add" />
+                        <ui:Button text="{}" display-tooltip-when-elided="true" name="Rx-brace-btn" class="utility-btn-brace" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Sec-a-Ry" focusable="false" class="seca-VE-conts" style="left: 401px; display: flex; visibility: visible; top: -210px; width: 190.08px; height: 180.36px;">
+                        <ui:Button text="+" display-tooltip-when-elided="true" name="Ry-add-btn" focusable="false" class="utility-btn-add" />
+                        <ui:Label text="&lt;size=75&gt;R&lt;/size&gt;&lt;color=#008000ff&gt;y&lt;/color&gt;" display-tooltip-when-elided="true" name="Seca-Ry-label" class="sec-a-text" />
+                        <ui:Button text="{}" display-tooltip-when-elided="true" name="Ry-brace-btn" class="utility-btn-brace" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Sec-a-Rz" focusable="false" class="seca-VE-conts" style="left: 621px; visibility: visible; display: flex;">
+                        <ui:Label text="&lt;size=75&gt;R&lt;/size&gt;&lt;color=#0000ffff&gt;z&lt;/color&gt;" display-tooltip-when-elided="true" name="Seca-Rz-label" enable-rich-text="true" class="sec-a-text" />
+                        <ui:Button text="+" display-tooltip-when-elided="true" name="Rz-add-btn" focusable="false" class="utility-btn-add" />
+                        <ui:Button text="{}" display-tooltip-when-elided="true" name="Rz-brace-btn" class="utility-btn-brace" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Sec-a-txyz" focusable="false" class="seca-VE-conts" style="left: 842px; display: flex; visibility: visible;">
+                        <ui:Label text="&lt;size=75&gt;t&lt;/size&gt;&lt;color=red&gt;x&lt;color=#008000ff&gt;y&lt;color=#0000ffff&gt;z" display-tooltip-when-elided="true" name="Seca-txyz-label" class="sec-a-text" />
+                        <ui:Button text="{}" display-tooltip-when-elided="true" name="txyz-brace-btn" class="utility-btn-brace" />
+                        <ui:Button text="+" display-tooltip-when-elided="true" name="txyz-add-btn" focusable="false" class="utility-btn-add" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Sec-a-M" class="seca-VE-conts" style="left: 1063px; display: flex; visibility: visible;">
+                        <ui:Button text="+" display-tooltip-when-elided="true" name="M-add-btn" focusable="false" class="utility-btn-add" />
+                        <ui:Label text="&lt;size=75&gt;M&lt;/size&gt;" display-tooltip-when-elided="true" name="Seca-M-label" class="sec-a-text" />
+                        <ui:Button text="{}" display-tooltip-when-elided="true" name="M-brace-btn" class="utility-btn-brace" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Sec-a-brace" class="seca-VE-conts" style="top: -210px; left: 1456px;">
+                        <ui:Label text="&lt;size=75&gt;+{}&lt;/size&gt;" display-tooltip-when-elided="true" name="Seca-brace-label" class="sec-a-text" />
+                        <ui:Button text="+" display-tooltip-when-elided="true" name="brace-add-btn" focusable="false" class="utility-btn-add" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="DG-VE" style="position: relative; width: 500px; height: 130px; top: -110px;">
+                    <ui:VisualElement name="DGbtn-VE" style="left: 280px; position: absolute; height: 105px; width: 128px; justify-content: space-around; align-items: stretch; top: 2px;">
+                        <ui:Button text="D" display-tooltip-when-elided="true" name="Degrees" enable-rich-text="true" class="DG-btn" style="border-top-right-radius: 30px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 1px;" />
+                        <ui:Button text="R" display-tooltip-when-elided="true" name="Radians" class="DG-btn" style="position: relative; border-bottom-right-radius: 30px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                    </ui:VisualElement>
+                    <ui:TextField picking-mode="Ignore" name="DGfield" focusable="false" is-delayed="false" style="width: 280px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; align-items: stretch; justify-content: space-around; height: 105px; top: 7px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="line" style="position: relative; width: 80%; height: 5px; background-color: rgb(127, 131, 134); top: -110px;" />
+                <ui:VisualElement name="text-fields" style="position: absolute; width: 80%; top: 986px; height: 490px; align-items: auto; justify-content: center; flex-direction: row;">
+                    <ui:VisualElement name="col-1" style="width: 320px; height: 100%;">
+                        <ui:TextField picking-mode="Ignore" name="TextField-1" class="text-fields text-fields1" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-2" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-3" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-4" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="col-2" style="width: 320px; height: 100%;">
+                        <ui:TextField picking-mode="Ignore" name="TextField-5" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-6" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-7" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-8" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="col-3" style="width: 320px; height: 100%;">
+                        <ui:TextField picking-mode="Ignore" name="TextField-9" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-10" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-11" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-12" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="col-4" style="width: 320px; height: 100%;">
+                        <ui:TextField picking-mode="Ignore" name="TextField-13" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-14" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-15" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                        <ui:TextField picking-mode="Ignore" name="TextField-16" class="text-fields text-fields1" style="width: 280px; height: auto;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Exp-Val" style="position: absolute; right: 40px; width: 100px; height: auto;">
+                        <ui:VisualElement name="DGbtn-VE" style="height: 120px; width: 128px; justify-content: space-around; align-items: stretch;">
+                            <ui:Button text="E" display-tooltip-when-elided="true" name="ExpressionBtn" enable-rich-text="true" class="DG-btn" style="border-top-right-radius: 30px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 1px; border-top-left-radius: 30px; height: 50%;" />
+                            <ui:Button text="V" display-tooltip-when-elided="true" name="ValueBtn" class="DG-btn" style="position: relative; border-bottom-right-radius: 30px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-bottom-left-radius: 30px; height: 50%;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="cont-bottom" style="position: absolute; bottom: 0; width: 100%; height: 25%; background-color: rgb(180, 180, 180); border-bottom-left-radius: 45px; border-bottom-right-radius: 45px; align-items: center;">
+                    <ui:VisualElement name="text-calc" style="position: relative; width: 80%; height: 490px; align-items: auto; justify-content: center; flex-direction: row;">
+                        <ui:VisualElement name="col-1" style="width: 320px; height: 100%; display: flex;">
+                            <ui:Label display-tooltip-when-elided="true" name="Label-1" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-2" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-3" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-4" class="texts" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="col-2" style="width: 320px; height: 100%; display: flex;">
+                            <ui:Label display-tooltip-when-elided="true" name="Label-5" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-6" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-7" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-8" class="texts" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="col-3" style="width: 320px; height: 100%; display: flex;">
+                            <ui:Label display-tooltip-when-elided="true" name="Label-9" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-10" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-11" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-12" class="texts" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="col-4" style="width: 320px; height: 100%; display: flex;">
+                            <ui:Label display-tooltip-when-elided="true" name="Label-13" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-14" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-15" class="texts" />
+                            <ui:Label display-tooltip-when-elided="true" name="Label-16" class="texts" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label text="T=" display-tooltip-when-elided="true" name="T-Label" style="font-size: 80px; margin-left: 30px; position: relative; bottom: 257px; left: -840px; height: 120px; width: 100px; -unity-font-style: bold; color: rgb(0, 0, 0);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

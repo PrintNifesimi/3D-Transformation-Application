@@ -1,0 +1,229 @@
+.seca-VE-conts {
+    position: absolute;
+    width: 190.08px;
+    height: 180.36px;
+    background-color: rgb(218, 218, 218);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    align-items: center;
+    justify-content: space-around;
+    top: -210px;
+}
+
+.sec-a-text {
+    font-size: 65px;
+    color: rgb(0, 0, 0);
+}
+
+.utility-btn-add {
+    position: absolute;
+    top: -2px;
+    width: 30%;
+    height: 30%;
+    font-size: 65px;
+    padding-bottom: 15px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 15px;
+    right: -4px;
+    background-color: rgb(132, 132, 132);
+    color: rgb(225, 224, 228);
+}
+
+.utility-btn-brace {
+    position: absolute;
+    top: -2px;
+    width: 30%;
+    height: 30%;
+    font-size: 40px;
+    padding-bottom: 6px;
+    overflow: hidden;
+    visibility: visible;
+    background-color: rgb(178, 178, 178);
+    left: -4px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 15px;
+    color: rgb(41, 41, 41);
+    -unity-font-style: bold;
+}
+
+.slot {
+    position: relative;
+    flex-direction: row;
+    width: 190.08px;
+    height: 180.36px;
+    background-color: rgb(218, 218, 218);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: -8px;
+}
+
+.unity-scroll-view--horizontal {
+}
+
+.seca-VE-conts-add {
+    flex-direction: row;
+    background-color: rgb(174, 174, 174);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    align-items: center;
+    justify-content: space-around;
+    width: 190.08px;
+    height: 180.36px;
+    position: absolute;
+    left: 339px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(111, 113, 113);
+    border-right-color: rgb(111, 113, 113);
+    border-top-color: rgb(111, 113, 113);
+    border-bottom-color: rgb(111, 113, 113);
+}
+
+.unity-toggle__checkmark {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 31px;
+    border-bottom-right-radius: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -1px;
+    background-color: rgb(132, 132, 132);
+    color: rgb(255, 255, 255);
+}
+
+.seca-VE-conts-add:hover {
+    flex-direction: row;
+    background-color: rgb(218, 218, 218);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    align-items: center;
+    justify-content: space-around;
+    width: 190.08px;
+    height: 180.36px;
+    position: absolute;
+    left: 339px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(111, 113, 113);
+    border-right-color: rgb(111, 113, 113);
+    border-top-color: rgb(111, 113, 113);
+    border-bottom-color: rgb(111, 113, 113);
+}
+
+.utility-btn-add:active {
+    position: absolute;
+    top: -2px;
+    width: 30%;
+    height: 30%;
+    font-size: 65px;
+    padding-bottom: 15px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 15px;
+    right: -4px;
+    background-color: rgb(132, 132, 132);
+    color: rgb(188, 188, 188);
+}
+
+.unity-base-text-field__input {
+    background-color: rgb(205, 205, 205);
+    -unity-text-align: middle-center;
+    font-size: 51px;
+    -unity-font-style: bold;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-left-color: rgb(132, 132, 132);
+    border-right-color: rgb(132, 132, 132);
+    border-top-color: rgb(132, 132, 132);
+    border-bottom-color: rgb(132, 132, 132);
+    height: 100px;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.DG-btn {
+    font-size: 53px;
+    color: rgb(132, 132, 132);
+    background-color: rgb(171, 171, 171);
+    height: 50%;
+    display: flex;
+    visibility: visible;
+    -unity-font-style: bold;
+    -unity-font: url('Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss');
+    -unity-text-align: middle-center;
+}
+
+.DG-btn:focus {
+    background-color: rgb(79, 79, 79);
+    -unity-text-align: middle-center;
+    font-size: 55px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+}
+
+.seca-VE-conts-add:focus {
+    flex-direction: row;
+    background-color: rgb(218, 218, 218);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    align-items: center;
+    justify-content: space-around;
+    width: 190.08px;
+    height: 180.36px;
+    position: absolute;
+    left: 339px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(111, 113, 113);
+    border-right-color: rgb(111, 113, 113);
+    border-top-color: rgb(111, 113, 113);
+    border-bottom-color: rgb(111, 113, 113);
+}
+
+.text-fields1 {
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+.unity-base-text-field__input:focus {
+    background-color: rgb(127, 131, 134);
+    -unity-text-align: middle-center;
+    font-size: 51px;
+    -unity-font-style: bold;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.texts {
+    width: 280px;
+    margin-bottom: 20px;
+    height: 100px;
+    font-size: 51px;
+    -unity-text-align: middle-center;
+    color: rgba(0, 0, 0, 255);
+    -unity-font-style: bold;
+}
