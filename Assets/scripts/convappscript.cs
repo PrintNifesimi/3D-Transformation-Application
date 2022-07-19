@@ -40,7 +40,7 @@ public class convappscript : MonoBehaviour
          
 
     
-    int count =1;
+    public static int count =1;
     private void Update() {
         if(Input.GetKeyUp(KeyCode.Return)){
             
@@ -123,6 +123,7 @@ public class convappscript : MonoBehaviour
 
     
     public void cloneUtility(int caseNum){
+        if(UtilityData.check(caseNum,count)==true){return;}
         VisualElement CloneVe = new VisualElement();
         Label LabelClone = new Label();
         Toggle togglebtn = new Toggle();
@@ -211,11 +212,10 @@ public class convappscript : MonoBehaviour
         }
         
         MatrixCalculator MC = new MatrixCalculator(UtilityArr,count,setArr,Labels,CloneVe);
-        
         CloneVe.Focus();
     }
     private void drag(int switchNum){
-        
+        if(UtilityData.check(switchNum,count)==true){return;}
         switch(switchNum){
             case 1:
                Clone = new CloneUtilityHover(rxVE);
@@ -235,7 +235,8 @@ public class convappscript : MonoBehaviour
                 
                 break;
             case 6:
-                Clone = new CloneUtilityHover(BraceVE);
+                count++;
+                Clone = new CloneUtilityHover(BraceVE,count);
                 
                 break;
         }
@@ -270,9 +271,11 @@ public class convappscript : MonoBehaviour
         }
         else if(switchNum==6){
             setArr.Add("{"+count+"}");
+            DragDrop ddr_c = new DragDrop(VE,secA_2,true,switchNum);
             disablefields();
         }
         MatrixCalculator MC = new MatrixCalculator(UtilityArr,count,setArr,Labels,VE);
+        
     }
 
     private void degreesORRadians(int val){
@@ -286,7 +289,9 @@ public class convappscript : MonoBehaviour
             drField.value =Math.Round((double.Parse(drField.text)*1/Mathf.PI*180))+"";
         }
     }
-    
+    public static int getSetCount(){
+        return count;
+    }
     
     public void disablefields()
     {

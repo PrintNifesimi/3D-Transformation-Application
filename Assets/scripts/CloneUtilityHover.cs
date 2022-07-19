@@ -18,6 +18,11 @@ public class CloneUtilityHover
      
      
  }
+    public CloneUtilityHover(VisualElement target, int count){
+        targetparent=target.parent;
+        this.target = target;
+        this.count=count;
+    }
     
     
   
@@ -65,7 +70,6 @@ public class CloneUtilityHover
                 LabelClone.text = "<size=75>M</size>";
                 break;
             case 6:
-                count++;
                 LabelClone.text ="{"+count+"}";
                 break;
 

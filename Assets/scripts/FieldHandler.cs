@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
 public class FieldHandler
 {
     private VisualElement target;
     
-    private int[] valueHolder;
     private TextField[] TextFields;
 
     private TextField drField;
+    
+    
     private Button expressionBtn;
     private Button valueBtn;
     private static Boolean evOnOff=false;
@@ -25,6 +27,8 @@ public class FieldHandler
     private Button radiansBtn;
     private int[] res = new int[3];
     private static Boolean drFieldFocus=true;
+    private int setCount = convappscript.getSetCount();
+    
     public FieldHandler(VisualElement target, int identifier,TextField drField,Button expressionBtn,Button valueBtn,TextField[] textFields){
         
         this.target=target;
@@ -45,6 +49,8 @@ public class FieldHandler
     
 
     public void innitStart(){
+        
+        
         identifier = id;
         drFieldfocus(1);
         for(int i=0;i<16;i++){
@@ -56,7 +62,7 @@ public class FieldHandler
         //valueBtn?.RegisterCallback<ClickEvent>(ev=> evHandler(valueBtn));
         if(identifier!=4){
         clearTextfields();
-        target?.RegisterCallback<ClickEvent>(ev=> clearTextfields());
+        //target?.RegisterCallback<ClickEvent>(ev=> viewUtilityData());
         disableTextFields();}
         
         if(identifier==4){
@@ -103,10 +109,13 @@ public class FieldHandler
     }
 
     private void valueHandler(){
+        
+        
         if(identifier!=4){enableTextFields();disableTextFields();setDrfield(true);}
         if (drField.value!="" && drFieldFocus){
             
-           
+            if(id<=4){UtilityData.addUtility(identifier,convappscript.getSetCount(),double.Parse(drField.text));}
+            
             double radValue=0;
             
             try{         
@@ -244,6 +253,7 @@ public class FieldHandler
 
             }
            getTextfieldValues();
+           
         }else if(identifier==4){
             
             for(int i=0;i<TextFields.Length;i++){
@@ -268,11 +278,13 @@ public class FieldHandler
         }
         
        
-        
+       if(identifier!=4){target?.RegisterCallback<ClickEvent>(ev=> viewUtilityData());} 
         
         
         
     }
+    
+    
     public void txyzHandler(int tID){
         
         
@@ -291,6 +303,9 @@ public class FieldHandler
     }
 
     private static double degTORad(int deg){
+        return (deg*Math.PI)/180;
+    }
+    private static double degTORad(double deg){
         return (deg*Math.PI)/180;
     }
 
@@ -341,10 +356,11 @@ public class FieldHandler
                 count++;
             }
         }}
-      
+        
         return utilityValues;
 
     }
+    
 
     private void disableTextFields(){
         //clearTextfields();
@@ -364,6 +380,7 @@ public class FieldHandler
     }
 
     public void clearTextfields(){
+        
         drField.value="";
         foreach(TextField x in TextFields){
             x.value="";
@@ -377,6 +394,7 @@ public class FieldHandler
     }
 
     public String getDrField(){
+        
         return drField.text;
     }
     
@@ -396,6 +414,150 @@ public class FieldHandler
        }else{
            drFieldFocus=true;
        }
+   }
+
+   private void viewUtilityData(){
+        if(id==6){clearTextfields();
+        return;}
+        double angle =UtilityData.getUtilityAngle(setCount,id);
+        drField.value=angle+"";
+        
+        double radValue=0;
+            
+            try{         
+                radValue = Math.Round(degTORad(angle),3);     
+            }catch{
+                radValue = Math.Round(angle,3);
+                        }
+            cos = Math.Round(Mathf.Cos((float)radValue),4)+"";
+            sin = Math.Round(Mathf.Sin((float)radValue),4)+"";
+            nSin = -Math.Round(Mathf.Sin((float)radValue),4)+"";
+            
+            switch(id){
+                
+                case 1:
+                {
+                    
+                    TextFields[0].value="1.0000";
+                    TextFields[0].focusable=false;
+                    TextFields[1].value="0.0000";
+                    TextFields[1].focusable=false;
+                    TextFields[2].value="0.0000";
+                    TextFields[2].focusable=false;
+                    TextFields[4].value="0.0000";
+                    TextFields[4].focusable=false;
+                    TextFields[8].value="0.0000";
+                    TextFields[8].focusable=false;
+                    if(evOnOff){
+                        TextFields[5].value = "cos "+radValue;
+                        valuesClone[5]=cos;
+                        TextFields[6].value= "sin "+radValue;
+                        valuesClone[6]=sin;
+                        TextFields[9].value="-sin "+radValue;
+                        valuesClone[9]=nSin;
+                        TextFields[10].value="cos "+radValue;
+                        valuesClone[10]=cos;
+                        
+                    }else if(evOnOff == false){
+                        TextFields[5].value = cos;
+                        
+                        TextFields[6].value= sin;
+                        
+                        TextFields[9].value=nSin;
+                        
+                        TextFields[10].value=cos;
+                        
+                    }
+                        TextFields[5].focusable=true;
+                        TextFields[6].focusable=true;
+                        TextFields[10].focusable=true;
+                        TextFields[9].focusable=true;
+                    
+                break;
+                }
+
+                case 2:
+                {
+                    
+                    TextFields[1].value="0.0000";
+                    TextFields[1].focusable=false;
+                    TextFields[9].value="0.0000";
+                    TextFields[9].focusable=false;
+                    TextFields[4].value="0.0000";
+                    TextFields[4].focusable=false;
+                    TextFields[5].value="1.0000";
+                    TextFields[5].focusable=false;
+                    TextFields[6].value= "0.0000";
+                    TextFields[6].focusable=false;
+                    if(evOnOff){
+                        TextFields[0].value = "cos "+radValue;
+                        valuesClone[0]=cos;
+                        TextFields[8].value= "sin "+radValue;
+                        valuesClone[8]=sin;
+                        TextFields[2].value="-sin "+radValue;
+                        valuesClone[2]=nSin;
+                        TextFields[10].value="cos "+radValue;
+                        valuesClone[10]=cos;
+                    }else if(evOnOff==false){
+                        TextFields[0].value = cos;
+                        
+                        TextFields[8].value= sin;
+                        
+                        TextFields[2].value=nSin;
+                        
+                        TextFields[10].value=cos; 
+                        
+                    }
+                        TextFields[0].focusable=true;
+                        TextFields[8].focusable=true;
+                        TextFields[2].focusable=true;
+                        TextFields[10].focusable=true;
+                    
+                break;
+                }
+
+                case 3:
+                {
+                    
+                    TextFields[2].value="0.0000";
+                    TextFields[2].focusable=false;
+                    TextFields[6].value="0.0000";
+                    TextFields[6].focusable=false;
+                    TextFields[8].value="0.0000";
+                    TextFields[8].focusable=false;
+                    TextFields[10].value="1.0000";
+                    TextFields[10].focusable=false;
+                    TextFields[9].value= "0.0000";
+                    TextFields[9].focusable=false;
+                    if(evOnOff){
+                        TextFields[0].value = "cos "+radValue;
+                        valuesClone[0]=cos;
+                        TextFields[1].value= "sin "+radValue;
+                        valuesClone[1]=sin;
+                        TextFields[4].value="-sin "+radValue;
+                        valuesClone[4]=nSin;
+                        TextFields[5].value="cos "+radValue;
+                        valuesClone[5]=cos;
+                    }else if(evOnOff==false){
+                        TextFields[0].value = cos;
+                        
+                        TextFields[1].value= sin;
+                        
+                        TextFields[4].value=nSin;
+                        
+                        TextFields[5].value=cos;
+                        
+                    }
+                        TextFields[0].focusable=true;
+                        TextFields[1].focusable=true;
+                        TextFields[4].focusable=true;
+                        TextFields[5].focusable=true;
+
+
+                break;
+                }
+
+            }
    }
 
 }

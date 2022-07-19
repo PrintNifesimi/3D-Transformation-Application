@@ -129,7 +129,7 @@ public class DragDrop : PointerManipulator
                 target.transform.position=closestPos;
                 //UnregisterCallbacksFromTarget();
             }else{
-               // root.Remove(target);
+                //root.Remove(target);
                 target.transform.position = targetStartPosition;
                 //fieldHandler.clearTextfields();
                 //fieldHandler.setDrfield(false);
